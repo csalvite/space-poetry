@@ -1,3 +1,14 @@
+# space-poetry
+
+Space-Poetry is an app where you can see pictures from space between two dates or aleatory dates, it uses NASA's Open API APOD.
+
+To run this app, please read next steps:
+
+- Run npm i command to install dependencies
+- Copy file .env.example to create a .env file
+- Here paste your NASA api key to run fetch requests.
+- Enjoy Space pictures :)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
