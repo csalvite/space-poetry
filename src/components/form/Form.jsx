@@ -13,22 +13,21 @@ const Form = () => {
         <section id='form-section' className="form-section">
             <h2 className="title-section">What do you want to see?</h2>
 
-            <form>
-                <ul>
-                    <li>
-                        <label>Pictures between two dates</label> <br />
-                        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}  /> 
-                        <DatePicker selected={endDate} onChange={(date) => setEndDate(date)}  />
-                    </li>
-                    <li>
-                        <label>Aleatory dates: </label>
-                        <input type='number' name="aleatory" placeholder="Write a number of pics you want to see..." />
-                    </li>
-                    <li>
-                        <button>Lets See!</button>
-                    </li>
-                </ul>
-            </form>
+        <form>
+            <div className="form-container">
+                <div className="pics-between-two-dates">
+                    <label>Pictures between two dates</label> <br />
+                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}  /> 
+                    <DatePicker selected={endDate} onChange={(date) => setEndDate(date)}  />
+                </div>
+                <div className="aleatory-dates">
+                    <label>Aleatory dates: </label>
+                    <input type='number' max={100} name="aleatory" placeholder="Write a number of pics you want to see..." />
+                </div>
+            </div>
+
+            <button className="btn-form-section">Lets See!</button>
+        </form>
         </section>
     )
 }

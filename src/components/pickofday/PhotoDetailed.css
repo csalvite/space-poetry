@@ -21,6 +21,10 @@ section {
   text-align: center;
 }
 
+.pic-of-day-container p {
+  width: 75vw;
+}
+
 img.pic-list {
   object-position: center;
   object-fit: cover;
