@@ -5,6 +5,7 @@ const { REACT_APP_URL, REACT_APP_API_KEY } = process.env;
 const PhotoDetailed = () => {
     
     const [picOfDay, setPicOfDay] = useState([]);
+    const [pic, setPic] = useState('/resources/vectors/tail-spin.svg');
 
     useEffect(() => {
         const getPicOfDay = async () => {
@@ -15,6 +16,7 @@ const PhotoDetailed = () => {
                 if (response.ok) {
                     const body = await response.json();
                     setPicOfDay(body);
+                    setPic(body.url);
                 } else {
                     setPicOfDay({
                         error: 'Ha habido un error :('
@@ -42,7 +44,7 @@ const PhotoDetailed = () => {
                 <p>
                     {picOfDay.explanation} - <strong>{picOfDay.copyright}</strong>
                 </p>
-                <img className="pic-list" src={picOfDay.hdurl} alt='space pic' />
+                <img className="pic-list" src={pic} alt='space pic' />
             </div>
         </section>
     )
