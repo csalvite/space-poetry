@@ -24,10 +24,11 @@ const Form = () => {
     
             if (response.ok) {
                 const body = await response.json();
-                console.log(body);
+                setResults(body);
             } else {
                 console.error('error :/');
             }
+
         } catch (error) {
             console.error(error.msg);
         }
@@ -39,6 +40,10 @@ const Form = () => {
 
         <form onSubmit={(e) => {
             e.preventDefault();
+            window.scrollTo({
+               top: 3000,
+               behavior: 'smooth',
+           })
             setShowResults(true);
             handleSearchPics();
         }}>
@@ -50,7 +55,7 @@ const Form = () => {
                 </div>
                 <div className="aleatory-dates">
                     <label>Aleatory dates: </label>
-                    <input type='number' max={100} name="aleatory" placeholder="Write a number of pics you want to see..." />
+                    <input type='number' max={10} name="aleatory" placeholder="Write a number of pics you want to see..." />
                 </div>
             </div>
 
