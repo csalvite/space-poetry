@@ -36,7 +36,7 @@ const PhotoDetailed = () => {
             <h2 className="title-section">Pic of the Day</h2>
             <div className="pic-of-day-container">
                 <h3>{picOfDay.title}</h3>
-                <i>{picOfDay.date}</i>
+                <i>{new Date(picOfDay.date).toLocaleDateString()}</i>
                 {/* <div className="pic-of-day-title">
                     <h3>{picOfDay.title}</h3>
                     <h4>{picOfDay.copyright} - <i>{picOfDay.date}</i></h4>
