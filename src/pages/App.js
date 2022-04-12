@@ -1,4 +1,5 @@
 //import logo from './logo.svg';
+import { AboutMe } from '../components/about/AboutMe';
 import { Form } from '../components/form/Form';
 import { Header } from '../components/header/Header';
 import { Menu } from '../components/menu/Menu';
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <PhotoDetailed />
       <Form />
+      <AboutMe />
     </div>
   );
 }

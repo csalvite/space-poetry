@@ -58,10 +58,10 @@ const Menu = () => {
                         e.preventDefault();
                         scrollSmooth('form-section');
                     }}>Search more pics</a></li>
-                    <li><a href="#about-us"  onClick={(e) => {
+                    <li><a href="#about-me"  onClick={(e) => {
                         e.preventDefault();
-                        scrollSmooth('about-us');
-                    }}>About us</a></li>
+                        scrollSmooth('about-me');
+                    }}>About me</a></li>
                     <div className='icons'>
                         <a href='https://github.com/csalvite' target='_blank' rel='noreferrer'><i className="fa-brands fa-github"></i></a>
                         <a href='https://www.linkedin.com/in/cesar-alvite/' target='_blank' rel='noreferrer'><i className="fa-brands fa-linkedin"></i></a>
