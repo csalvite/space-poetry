@@ -7,8 +7,9 @@ const Results = ({ results, isBetweenTwoDates, startDate, endDate, aleatoryPics 
     const [itemInfo, setItemInfo] = useState();
 
     return (
-        <section className="results">
-            {isBetweenTwoDates ? <h2 className="title-section">Showing Pics Between {startDate} and {endDate}</h2> : <h2 className="title-section">Showing {aleatoryPics} Aleatory Pics</h2>}
+        <>
+        {isBetweenTwoDates ? <h2 className="title-section">Showing Pics Between {startDate} and {endDate}</h2> : <h2 className="title-section">Showing {aleatoryPics} Aleatory Pics</h2>}
+        <div className="results">
             {results?.map((item) => {
                 return (
                     <div key={item.date} className='pic-card' onClick={() => {
@@ -24,7 +25,8 @@ const Results = ({ results, isBetweenTwoDates, startDate, endDate, aleatoryPics 
             })}
 
             {isOpen ? <ResultDetailed item={itemInfo} setIsOpen={setIsOpen} /> : ''}
-        </section>
+        </div>
+        </>
     );
 }
 

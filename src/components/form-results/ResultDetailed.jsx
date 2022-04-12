@@ -3,13 +3,16 @@ import './Results.css';
 const ResultDetailed = ({ item, setIsOpen }) => {
 
     return (
-        <div className="modal">
-            <i className="fa-solid fa-x" onClick={() => setIsOpen(false)}></i>
-            <h1>OPEN!</h1>
-            <img src={item.url} alt={item.title} />
-            <h1>{item.title}</h1>
-            <i>{item.date}</i>
-            <p>{item.explanation}</p>
+        <div className='popup' onClick={() => setIsOpen(false)}>
+            <div className="popup_content">
+                <div className='content'>
+                    <i className="fa-solid fa-x" onClick={() => setIsOpen(false)}></i>
+                    <img src={item.url} alt={item.title} />
+                    <h1>{item.title}</h1>
+                    <i>{item.date}</i>
+                    <p>{item.explanation}</p>
+                </div>
+            </div>
         </div>
     )
 }

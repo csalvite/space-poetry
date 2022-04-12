@@ -58,4 +58,8 @@ button.btn-form-section:hover {
   div.pics-between-two-dates {
     width: auto;
   }
+
+  div.aleatory-dates {
+    align-items: center;
+  }
 }

@@ -1,4 +1,4 @@
-section.results {
+div.results {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -31,16 +31,61 @@ section.results {
 }
 
 /* Result Detailed component */
-.modal {
+.popup {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #76727f;
+    height: 100vh;
+    width: 100vw;
+    background-color: #76727f1f;
+    z-index: 9999;
+    transition: all .3s;
+    backdrop-filter: blur(12px);
 
-    display: flex;
-    flex-direction: column;
+    overflow-y: scroll;
 }
 
-.modal > i {
+.popup_content {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.85);
+    background-color: #000;
+    transition: all 500ms;
+    border-radius: 25px;
+}
 
+.content {
+    padding: 2rem;
+}
+
+.content > img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+.content > i {
+    padding: 1rem 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.content > i:hover {
+    color: red;
+}
+
+@media only screen and (max-width: 700px) {
+    .popup_content {
+        width: 100%;
+        transform: translate(-50%, -50%) scale(.95);
+
+        top: 100%;
+    }
+
+    .content {
+        padding: 1rem;
+    }
 }
