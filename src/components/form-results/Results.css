@@ -1,8 +1,22 @@
+section.results-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+}
+
 div.results {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+}
+
+.title-results {
+    font-size: 2.5em;
+    font-weight: 400;
+    
 }
 
 .pic-card {
@@ -75,6 +89,22 @@ div.results {
 
 .content > i:hover {
     color: red;
+}
+
+.fa-rotate-right {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 2em;
+    transition: all 500ms ease;
+    width: fit-content;
+/* 
+    display: flex;
+    justify-content: center; */
+}
+
+.fa-rotate-right:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 700px) {

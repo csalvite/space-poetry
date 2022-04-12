@@ -95,6 +95,7 @@ const Form = () => {
                             startDate={startDate.toLocaleDateString()}
                             endDate={endDate.toLocaleDateString()}
                             aleatoryPics={searchCountPics}
+                            handleSearchPics={handleSearchPics}
                         /> : ''}
         </section>
     )

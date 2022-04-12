@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { ResultDetailed } from './ResultDetailed';
 import './Results.css';
 
-const Results = ({ results, isBetweenTwoDates, startDate, endDate, aleatoryPics }) => {
+const Results = ({ results, isBetweenTwoDates, startDate, endDate, aleatoryPics, handleSearchPics }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [itemInfo, setItemInfo] = useState();
 
+    const titleReload = `Reload ${aleatoryPics} pictures`;
+
     return (
-        <>
-        {isBetweenTwoDates ? <h2 className="title-section">Showing Pics Between {startDate} and {endDate}</h2> : <h2 className="title-section">Showing {aleatoryPics} Aleatory Pics</h2>}
+        <section className='results-section'>
+        {isBetweenTwoDates ? <h3 className="title-results">Showing Pics Between {startDate} and {endDate}</h3> : <h3 className="title-results">Showing {aleatoryPics} Aleatory Pics</h3>}
         <div className="results">
             {results?.map((item) => {
                 return (
@@ -25,8 +27,10 @@ const Results = ({ results, isBetweenTwoDates, startDate, endDate, aleatoryPics 
             })}
 
             {isOpen ? <ResultDetailed item={itemInfo} setIsOpen={setIsOpen} /> : ''}
+
         </div>
-        </>
+            {!isBetweenTwoDates ? <i className="fa-solid fa-rotate-right" title={titleReload} onClick={() => handleSearchPics()}></i> : '' }
+        </section>
     );
 }
 
