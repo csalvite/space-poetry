@@ -41,11 +41,17 @@ nav.header-container > i {
   font-size: 5em;
   position: absolute;
   transition: bottom 500ms ease;
-  bottom: 3rem;
+  bottom: 0.5rem;
   padding: 1rem;
 }
 
 nav.header-container > i:hover {
   bottom: 4rem;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  nav.header-container > i {
+    bottom: 3rem;
+  }
 }

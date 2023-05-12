@@ -1,29 +1,28 @@
-
 import { AngleDown } from './AngleDown';
 import './Header.css';
 
 const Header = () => {
+  return (
+    <header id='home'>
+      <video
+        autoPlay
+        loop
+        muted
+        src='/resources/videos/moon_background.mp4'
+        poster='/resources/img/AboutMe.jpg'
+        className='video-background'
+      >
+        Video cannot be loaded.
+      </video>
 
-    return (
-        <header id='home'>
-            <video
-                autoPlay
-                loop
-                muted
-                src="./resources/videos/moon_background.mp4"
-                className="video-background">
-                Video cannot be loaded.
-			</video>
+      <nav className='header-container'>
+        <h1>Space Poetry</h1>
+        <h2>La belleza del espacio</h2>
 
-            <nav className='header-container'>
-                <h1>Space Poetry</h1>
-                <h2>La belleza del espacio</h2>
-                
-                <AngleDown />
-            </nav>
-
-        </header>
-    )
-}
+        <AngleDown />
+      </nav>
+    </header>
+  );
+};
 
 export { Header };
